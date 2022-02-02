@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DTD -->
+<!DOCTYPE dataset [
+	<!ELEMENT dataset (station)*>
+	<!ATTLIST dataset lat CDATA #REQUIRED long CDATA #REQUIRED msg CDATA #REQUIRED>
+	<!ELEMENT station (county,municipality,dd,address,companyName,lat,long,h24,brand,phone+,fuels)*>
+	<!ATTLIST station distance CDATA #REQUIRED stationID CDATA #REQUIRED>
+	<!ELEMENT county (#PCDATA)>
+	<!ATTLIST county countyID CDATA #REQUIRED>
+	<!ELEMENT municipality (#PCDATA)>
+	<!ATTLIST municipality municipalityID CDATA #REQUIRED>
+	<!ELEMENT dd (#PCDATA)>
+	<!ATTLIST dd ddID CDATA #REQUIRED>
+	<!ELEMENT address (#PCDATA)>
+	<!ELEMENT companyName (#PCDATA)>
+	<!ELEMENT lat (#PCDATA)>
+	<!ELEMENT long (#PCDATA)>
+	<!ELEMENT h24 EMPTY>
+	<!ATTLIST h24 value (0|1) #IMPLIED>
+	<!ELEMENT brand (#PCDATA)>
+	<!ATTLIST brand brandID CDATA #REQUIRED>
+	<!ELEMENT phone (#PCDATA)>
+	<!ELEMENT fuels (fuel)*>
+	<!ELEMENT fuel (#PCDATA)>
+	<!ATTLIST fuel fuelTypeID CDATA #REQUIRED price CDATA #REQUIRED priceTimeStamp CDATA #REQUIRED>
+]>
+<!--XML -->
+<dataset msg="Hello user!" long="40.12333" lat="23.123233">
+	<station distance="1.4" stationID="11111">
+		<county countyID="49000200">Λάρισας</county>
+		<municipality municipalityID="12345">Φαρσάλων</municipality>
+		<dd ddID="12345">Κοινότητα Σταυρού</dd>
+		<address><![CDATA[
+		            Σόλωνος 35, Σταυρός
+				 ]]>
+		</address>
+		<companyName><![CDATA[
+		            Τζίμης Oil
+				     ]]>
+		</companyName>
+		<lat>23.111456</lat>
+		<long>41.1114567</long>
+		<h24 value="0"/>
+		<brand brandID="1">EKO</brand>
+		<phone>2410555666</phone>
+		<phone>6932555444</phone>
+		<fuels>
+		    <fuel priceTimeStamp="2018-10-22 07:30:17"
+			  price="1.543"
+			  fuelTypeID="1">Super Duper Αμόλυβδη</fuel>
+		    <fuel priceTimeStamp="2018-10-22 07:30:45"
+				  price="1.043"
+				  fuelTypeID="2">WOW Diesel</fuel>
+			</fuels>
+	</station>
+	<station distance="2.4" stationID="22222">
+		<county countyID="49000200">Λάρισας</county>
+		<municipality municipalityID="223344">Φαρσάλων</municipality>
+		<dd ddID="222222">Τερψιθέα</dd>
+		<address><![CDATA[
+		            Λαρίσης 22, 
+				 ]]>
+		</address>
+		<companyName><![CDATA[
+		            ΤερψιOIL
+				     ]]>
+		</companyName>
+		<lat>23.223456</lat>
+		<long>41.2234567</long>
+		<h24 value="0"/>
+		<brand brandID="2">/Shell</brand>
+		<phone>2410555666</phone>
+		<fuels>
+			<fuel priceTimeStamp="2018-11-02 08:30:17"
+					      price="1.622"
+					      fuelTypeID="1">Super Duper Αμόλυβδη</fuel>
+			<fuel priceTimeStamp="2018-11-02 08:30:45"
+					      price="1.042"
+					      fuelTypeID="2">WOW Diesel</fuel>
+		</fuels>
+	</station>
+	<station distance="3.4" stationID="33333">
+		<county countyID="32000200">Μαγνησίας</county>
+		<municipality municipalityID="332211">Βελεστίνου</municipality>
+		<dd ddID="34567">Βελεστίνο</dd>
+		<address><![CDATA[
+		            Κενταύρου 35, Βελεστίνο
+				 ]]>
+		</address>
+		<companyName><![CDATA[
+	                Κένταυρος Oil
+					]]>
+		</companyName>
+		<lat>23.333333</lat>
+		<long>41.333333</long>
+		<h24 value="1"/>
+		<brand brandID="3">JETOIL</brand>
+		<phone>6932555444</phone>
+		<fuels>
+			<fuel priceTimeStamp="2018-11-10 07:30:17"
+					      price="1.543"
+					      fuelTypeID="1">Super Duper Αμόλυβδη</fuel>
+			<fuel priceTimeStamp="2018-11-10 07:30:45"
+					      price="1.043"
+					      fuelTypeID="2">WOW Diesel</fuel>
+		</fuels>
+	</station>
+</dataset>
